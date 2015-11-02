@@ -19,12 +19,4 @@ All functions assert whether the container passed to them is NULL or not. The
 reason for that is to avoid NULL pointer deferencing.
 
 ## Documentation
-dslib is documented using Doxygen. To create a documentation page, enter the
-following in a terminal:
-
-```
-doxygen /doc/doxyfile
-```
-
-It will generate a `html` folder. The documentation is located in the
-`index.html` file.
+dslib is documented using Doxygenand hosted at http://ivandardi.github.io/dslib/
