@@ -279,13 +279,13 @@ size_t dslib_graph_edge_count_undirected(const Graph const graph)
 	return dslib_graph_edge_count_directed(graph) / 2;
 }
 
-size_t graph_edge_get_cost(const Edge const edge)
+size_t dslib_graph_edge_get_cost(const Edge const edge)
 {
 	assert(edge != NULL);
 	return edge->cost;
 }
 
-void graph_edge_set_cost(Edge const edge, size_t cost)
+void dslib_graph_edge_set_cost(Edge const edge, size_t cost)
 {
 	assert(edge != NULL);
 	edge->cost = cost;

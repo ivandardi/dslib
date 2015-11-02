@@ -13,6 +13,6 @@ git push -u origin gh-pages
 
 # Committing the changes to the master branch
 cd ../..
-add .
-commit -m "Committing Doxygen update to master branch."
-push -u origin master
+git add .
+git commit -m "Committing Doxygen update to master branch."
+git push -u origin master

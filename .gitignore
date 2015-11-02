@@ -1,6 +1,5 @@
 # Misc folders
 bin/*
-doc/html
 
 # Codeblocks
 *.cbp

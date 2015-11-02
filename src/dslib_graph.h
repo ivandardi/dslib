@@ -261,7 +261,7 @@ size_t dslib_graph_edge_count_undirected(const Graph const graph);
  *
  * \sa dslib_graph_edge_set_cost()
  */
-size_t graph_edge_get_cost(const Edge const edge);
+size_t dslib_graph_edge_get_cost(const Edge const edge);
 
 /**
  * \brief Sets the cost of an edge.
@@ -270,7 +270,7 @@ size_t graph_edge_get_cost(const Edge const edge);
  *
  * \sa dslib_graph_edge_get_cost()
  */
-void graph_edge_set_cost(Edge const edge, size_t cost);
+void dslib_graph_edge_set_cost(Edge const edge, size_t cost);
 
 /**
  * \brief Returns a GraphIterator to the vertex that the edge points to.
