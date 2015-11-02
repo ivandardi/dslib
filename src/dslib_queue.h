@@ -39,8 +39,7 @@ Queue dslib_queue_init(size_t size, userFunction free);
  * \brief Returns whether the queue is empty (whether its size is 0).
  *
  * \param queue The queue.
- * \return 1 if the length of the queue is 0,
- *         0 otherwise.
+ * \return 1 if the queue is empty, 0 otherwise.
  *
  * \sa dslib_queue_clear(), dslib_queue_size()
  */

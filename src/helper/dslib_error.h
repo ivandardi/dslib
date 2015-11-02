@@ -16,7 +16,7 @@
  * way to handle exceptions. For example, if `dslib_error != DSLIB_SUCCESS`,
  * then an error has occurred, and that should be dealt with accordingly.
  *
- * /sa dslib_error_print()
+ * \sa dslib_error_print()
  */
 extern int dslib_error;
 

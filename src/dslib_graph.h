@@ -75,7 +75,9 @@ void dslib_graph_graph_clear(Graph const graph);
  * \brief Returns whether the graph is empty (whether its size is 0).
  *
  * \param graph The graph.
- * \return 1 if the number of vertices in the graph is 0, 0 otherwise.
+ * \return 1 if the graph is empty, 0 otherwise.
+ *
+ * \sa dslib_graph_clear()
  */
 int dslib_graph_empty(const Graph const graph);
 

@@ -46,8 +46,7 @@ SList dslib_slist_init(size_t size, userFunction free);
  * \brief Returns whether the slist is empty (whether its size is 0).
  *
  * \param slist The slist.
- * \return 1 if the length of the slist is 0,
- *         0 otherwise.
+ * \return 1 if the slist is empty, 0 otherwise.
  *
  * \sa dslib_slist_clear(), dslib_slist_erase(), dslib_slist_size()
  */

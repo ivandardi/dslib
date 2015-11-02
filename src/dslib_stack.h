@@ -40,8 +40,7 @@ Stack dslib_stack_init(size_t size, userFunction free);
  * \brief Returns whether the stack is empty (whether its size is 0).
  *
  * \param stack The stack.
- * \return 1 if the length of the stack is 0,
- *         0 otherwise.
+ * \return 1 if the stack is empty, 0 otherwise.
  *
  * \sa dslib_stack_clear(), dslib_stack_size()
  */
