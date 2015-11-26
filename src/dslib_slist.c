@@ -288,7 +288,7 @@ void dslib_slist_clear(SList const slist)
 		return;
 	}
 
-	struct SListNode* temp;
+	SListNode* temp;
 	while (slist->front) {
 		temp = slist->front;
 		slist->front = slist->front->next;

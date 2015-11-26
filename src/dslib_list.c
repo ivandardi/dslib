@@ -116,7 +116,7 @@ void dslib_list_pop_front(List const list)
 		return;
 	}
 
-	struct ListNode* temp = list->front;
+	ListNode* temp = list->front;
 	list->front = list->front->next;
 	if (list->front == NULL) {
 		list->back = NULL;
@@ -264,7 +264,7 @@ void dslib_list_clear(List const list)
 		return;
 	}
 
-	struct ListNode* temp;
+	ListNode* temp;
 	while (list->front) {
 		temp = list->front;
 		list->front = list->front->next;
@@ -324,5 +324,6 @@ void dslib_list_iterator_rdecrement(ListIterator* it)
 
 void* dslib_list_iterator_dereference(ListIterator it)
 {
+	assert(it != NULL);
 	return it->info;
 }
