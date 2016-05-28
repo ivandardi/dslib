@@ -62,4 +62,9 @@ typedef struct Queue* Queue;
  */
 typedef struct Stack* Stack;
 
+/**
+ * \brief A vector type.
+ */
+typedef struct Vector* Vector;
+
 #endif /* DSLIB_TYPEDEFS_H_INCLUDED */

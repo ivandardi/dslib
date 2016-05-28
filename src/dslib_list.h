@@ -39,9 +39,18 @@
  *        pointers, this can be passed as NULL.
  * \return An initialized list.
  *
- * \sa dslib_list_clear()
+ * \sa dslib_list_clear(), dslib_list_destroy()
  */
 List dslib_list_init(size_t size, userFunction free);
+
+/**
+ * \brief Destroys the list. It invalidates the whole list and any iterators.
+ *
+ * \param list The list.
+ *
+ * \sa dslib_list_clear(), dslib_list_init()
+ */
+void dslib_list_destroy(List const list);
 
 /**
  * \brief Returns whether the list is empty (whether its size is 0).
@@ -101,9 +110,11 @@ void* dslib_list_back(const List const list);
  * \param list The list.
  * \param val Value to be copied to the inserted element.
  *
+ * \return An iterator to the inserted element.
+ *
  * \sa dslib_list_push_back(), dslib_list_pop_front(), dslib_list_insert()
  */
-void dslib_list_push_front(List const list, const void* const val);
+ListIterator dslib_list_push_front(List const list, const void* const val);
 
 /**
  * \brief Removes the first element in the list list, effectively reducing
@@ -122,9 +133,11 @@ void dslib_list_pop_front(List const list);
  * \param list The list.
  * \param val Value to be copied to the inserted element.
  *
+ * \return An iterator to the inserted element.
+ *
  * \sa dslib_list_push_front(), dslib_list_pop_back(), dslib_list_insert()
  */
-void dslib_list_push_back(List const list, const void* const val);
+ListIterator dslib_list_push_back(List const list, const void* const val);
 
 /**
  * \brief Removes the last element in the list list, effectively reducing
@@ -205,14 +218,14 @@ ListIterator dslib_list_iterator_end(const List const list);
  *
  * \param it The iterator.
  */
-void dslib_list_iterator_increment(ListIterator* it);
+ListIterator dslib_list_iterator_increment(ListIterator it);
 
 /**
  * \brief Decrements the iterator.
  *
  * \param it The iterator.
  */
-void dslib_list_iterator_decrement(ListIterator* it);
+ListIterator dslib_list_iterator_decrement(ListIterator it);
 
 /**
  * \brief Returns a reverse iterator pointing to the last element in the
@@ -246,14 +259,14 @@ ListIterator dslib_list_iterator_rend(const List const list);
  *
  * \param it The reverse iterator.
  */
-void dslib_list_iterator_rincrement(ListIterator* it);
+ListIterator dslib_list_iterator_rincrement(ListIterator it);
 
 /**
  * \brief Decrements the reverse iterator.
  *
  * \param it The reverse iterator.
  */
-void dslib_list_iterator_rdecrement(ListIterator* it);
+ListIterator dslib_list_iterator_rdecrement(ListIterator it);
 
 /**
  * \brief Dereferences the iterator.
@@ -270,6 +283,6 @@ void* dslib_list_iterator_dereference(ListIterator it);
  * \param list The list.
  */
 
-#define dslib_list_foreach(it,list) for ((it) = dslib_list_iterator_begin((list)); (it) != dslib_list_iterator_end((list)); dslib_list_iterator_increment(&(it)))
+#define dslib_list_foreach(it,list) for ((it) = dslib_list_iterator_begin((list)); (it) != dslib_list_iterator_end((list)); (it) = dslib_list_iterator_increment((it)))
 
 #endif /* DSLIB_LIST_H_INCLUDED */
