@@ -1,7 +1,19 @@
 cmake_minimum_required(VERSION 2.8)
 
-project (dslib)
-set(CMAKE_BUILD_TYPE Release)
+set(PROJECT_NAME "dslib")
+project(${PROJECT_NAME})
+
+
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}")
+
+set(CMAKE_BUILD_TYPE Debug)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
-add_library(dslib SHARED src/dslib_error.c src/dslib_graph.c src/dslib_list.c src/dslib_queue.c src/dslib_slist.c src/dslib_stack.c src/dslib_vector.c)
+
+add_executable(${PROJECT_NAME}
+        test/main.c
+        test/test_vector_int.c
+        test/test_stack_int.c
+)
