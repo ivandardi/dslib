@@ -57,7 +57,9 @@ DSLIB_FUNCTION(stack, push)(DSLIB_TYPE_STACK* this, DSLIB_TYPE value)
 
 void DSLIB_FUNCTION(stack, pop)(DSLIB_TYPE_STACK* this)
 {
-	--this->size;
+	if (this->size) {
+		--this->size;
+	}
 }
 
 #undef DSLIB_TYPE

@@ -152,7 +152,9 @@ DSLIB_FUNCTION(vector, push_back)(DSLIB_TYPE_VECTOR* this, DSLIB_TYPE value)
 
 void DSLIB_FUNCTION(vector, pop_back)(DSLIB_TYPE_VECTOR* this)
 {
-	--this->size;
+	if (this->size) {
+		--this->size;
+	}
 }
 
 DSLIB_TYPE_VECTOR_ITERATOR
@@ -177,6 +179,10 @@ DSLIB_TYPE_VECTOR_ITERATOR
 DSLIB_FUNCTION(vector, erase)(DSLIB_TYPE_VECTOR* this,
                               DSLIB_TYPE_VECTOR_ITERATOR pos)
 {
+	if (!this->size) {
+		return pos;
+	}
+
 	DSLIB_TYPE* ret = pos.value + 1;
 
 	for (; DSLIB_FUNCTION(vector_iterator, not_equal)(pos, DSLIB_FUNCTION(
