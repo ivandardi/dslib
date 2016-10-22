@@ -1,21 +1,16 @@
-# dslib
+dslib
+------
 
 ## General
 
 dslib is a data structure library that implements stacks, queues, singly linked
-lists, doubly linked lists and graphs. It also provides iterators and a crude
-exception handling system.
+lists, doubly linked lists and graphs. It also provides iterators.
 
-Iterators are used to access individual elements of slists and lists, providing
-all of the usual iterator functionality as iterators to the beginning and
-end of containers, incrementing, decrementing and deferencing.
+Iterators are used to access individual elements of lists, providing all of the
+usual iterator functionality, such as iterators to the beginning and end of
+containers, incrementing, decrementing, etc.
 
-There's also a global dslib_error variable that stores an error code that most
-functions "throw". It's possible to check that variable for errors so that they
-can be dealt with. For more information on this, see the documentation.
-
-All functions assert whether the container passed to them is NULL or not. The
-reason for that is to avoid NULL pointer deferencing.
-
-## Documentation
-dslib is documented using Doxygen and hosted at http://ivandardi.github.io/dslib/
+The dslib follows the principle of "garbage in, garbage out". It will not
+perform safety checks, nor it will cleanup dynamic memory allocated by the user.
+It's the user's responsibility to ensure the validity of the arguments passed
+to the dslib functions.
