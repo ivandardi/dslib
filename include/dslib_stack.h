@@ -36,18 +36,19 @@ DSLIB_TYPE_STACK DSLIB_FUNCTION(stack, init)();
 
 void DSLIB_FUNCTION(stack, destroy)(DSLIB_TYPE_STACK* this);
 
-DSLIB_TYPE* DSLIB_FUNCTION(stack, top)(DSLIB_TYPE_STACK * this);
+DSLIB_TYPE* DSLIB_FUNCTION(stack, top)(DSLIB_TYPE_STACK* this);
 
-int DSLIB_FUNCTION(stack, empty)(DSLIB_TYPE_STACK * this);
+int DSLIB_FUNCTION(stack, empty)(DSLIB_TYPE_STACK* this);
 
-size_t DSLIB_FUNCTION(stack, size)(DSLIB_TYPE_STACK * this);
+size_t DSLIB_FUNCTION(stack, size)(DSLIB_TYPE_STACK* this);
 
 void
-DSLIB_FUNCTION(stack, push_ref)(DSLIB_TYPE_STACK * this,
-                                DSLIB_TYPE * value);
-void
-DSLIB_FUNCTION(stack, push)(DSLIB_TYPE_STACK * this, DSLIB_TYPE value);
+DSLIB_FUNCTION(stack, push_ref)(DSLIB_TYPE_STACK* this,
+                                DSLIB_TYPE* value);
 
-void DSLIB_FUNCTION(stack, pop)(DSLIB_TYPE_STACK * this);
+void
+DSLIB_FUNCTION(stack, push)(DSLIB_TYPE_STACK* this, DSLIB_TYPE value);
+
+void DSLIB_FUNCTION(stack, pop)(DSLIB_TYPE_STACK* this);
 
 #undef DSLIB_TYPE

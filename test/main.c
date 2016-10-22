@@ -2,6 +2,7 @@
 #include "test_stack_int.h"
 #include <stdio.h>
 
+
 int main()
 {
 	const int SIZE = 5;

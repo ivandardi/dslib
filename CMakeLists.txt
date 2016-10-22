@@ -16,4 +16,4 @@ add_executable(${PROJECT_NAME}
         test/main.c
         test/test_vector_int.c
         test/test_stack_int.c
-)
+        )

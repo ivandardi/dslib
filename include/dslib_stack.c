@@ -2,6 +2,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 
+
 static void DSLIB_FUNCTION(stack, maybe_resize)(DSLIB_TYPE_STACK* this)
 {
 	if (this->size >= this->capacity) {
@@ -42,7 +43,7 @@ size_t DSLIB_FUNCTION(stack, size)(DSLIB_TYPE_STACK* this)
 
 void
 DSLIB_FUNCTION(stack, push_ref)(DSLIB_TYPE_STACK* this,
-                                      DSLIB_TYPE* value)
+                                DSLIB_TYPE* value)
 {
 	this->data[this->size++] = *value;
 	DSLIB_FUNCTION(stack, maybe_resize)(this);
